@@ -20,4 +20,4 @@ controllers.controller('LoginController',
                 });
             };
 
-        })
+        });
