@@ -17,6 +17,18 @@ services.factory('DeviceService',
                     });
                 };
 
+                service.FindDeviceByLink = function (link, callback) {
+                    $http({
+                        url: link,
+                        method: "GET"
+                    })
+                            .success(function (data, status) {
+                                callback(data, status);
+                            }).error(function (data, status) {
+                        callback(data, status);
+                    });
+                };
+
                 return service;
             }
         ]);
