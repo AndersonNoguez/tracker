@@ -1,10 +1,10 @@
 package org.traccar.service;
 
+import arch.repository.Repository;
+import arch.service.BaseService;
+import arch.service.Service;
 import java.util.List;
 import javax.inject.Inject;
-import rs.pelotas.arch.repository.Repository;
-import rs.pelotas.arch.service.BaseService;
-import rs.pelotas.arch.service.Service;
 import org.traccar.entity.Device;
 import org.traccar.repository.DeviceRepository;
 
@@ -16,7 +16,7 @@ public class DeviceService extends BaseService<Device, Long> implements Service<
     private static final long serialVersionUID = -271039355862815425L;
 
     @Inject
-    DeviceRepository deviceRepository;
+    private DeviceRepository deviceRepository;
 
     @Override
     public Repository<Device, Long> getRepository() {

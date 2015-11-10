@@ -1,9 +1,9 @@
 package org.traccar.service;
 
+import arch.repository.Repository;
+import arch.service.BaseService;
+import arch.service.Service;
 import javax.inject.Inject;
-import rs.pelotas.arch.repository.Repository;
-import rs.pelotas.arch.service.BaseService;
-import rs.pelotas.arch.service.Service;
 import org.traccar.entity.Position;
 import org.traccar.repository.PositionRepository;
 
@@ -16,13 +16,13 @@ public class PositionService extends BaseService<Position, Long> implements Serv
     private static final long serialVersionUID = 6724032880321896946L;
 
     @Inject
-    PositionRepository positionRepository;
+    private PositionRepository positionRepository;
 
     @Override
     public Repository<Position, Long> getRepository() {
         return positionRepository;
     }
-    
+
     public Position getPositionToImport() {
         return null;
     }
